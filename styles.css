@@ -31,7 +31,7 @@ body{
 .container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
 }
 
 .container__botao {
@@ -67,8 +67,9 @@ body{
 }
 
 .secundario {
+    justify-items: center;
     align-items: center;
-    margin: 0 25em;
+    margin: 0 15em;
 }
 
 .descricao__titulo {
@@ -152,4 +153,64 @@ body{
 .container__botao:hover {
     background-color: var(--botao-azul-efeito);
     color: var(--background-color);
+}
+
+
+@media (max-width: 1024px){
+    body {
+        background-color: var(--background-color);
+        color: var(--principal-white);
+        font-family: var(--fonte-principal);
+        font-size: 16px;
+        font-weight: 400;
+        display: grid; /* Usar grid para o body */
+        grid-template-columns: 1fr; /* Uma única coluna */
+        align-items: center; /* Centraliza verticalmente */
+        justify-items: center; /* Centraliza horizontalmente */
+        min-height: 100vh; /* Ocupa toda a altura da tela */
+        padding: 0 1em; /* Adicionar algum padding para evitar que o conteúdo fique muito próximo das bordas */
+    }
+
+    .container {
+        display: grid; /* Usar grid no container */
+        grid-template-columns: 1fr; /* Uma única coluna */
+        height: auto; /* Ajustar altura automática */
+        align-items: center; /* Centraliza verticalmente */
+        justify-items: center; /* Centraliza horizontalmente */
+        text-align: center; /* Centraliza texto */
+        width: 100%; /* Permitir que o container ocupe toda a largura */
+    }
+
+    .container__caixa {
+        margin: 0; /* Remover margens laterais */
+        margin-bottom: 6em;
+        width: 100%; /* Permitir que a caixa ocupe toda a largura */
+        max-width: 600px; /* Definir largura máxima para a caixa */
+    }
+
+    .container__botao {
+        width: 100%;  /* Botão ocupa toda a largura disponível */
+        max-width: 300px; /* Largura máxima para o botão */
+        margin: 1em 8em; /* Margem vertical entre os botões */
+    }
+
+    .container__descricao {
+        padding: 2em; /* Ajustar o padding para um layout mais compacto */
+        width: 100%; /* Permitir que a descrição ocupe toda a largura */
+        max-width: 600px; /* Largura máxima para a descrição */
+    }
+    
+    .dispositivos__lista {
+        display: grid;
+        grid-template-columns: 1fr; /* Uma única coluna */
+        
+    }
+
+    .dispositivos__titulo {
+        font-size: 24px
+    }
+
+    .texto__rodape {
+        font-size: 12px; /* Diminuir o tamanho do texto do rodapé */
+    }
 }
