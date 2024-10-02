@@ -158,6 +158,8 @@ body{
 
 @media (max-width: 1024px){
     body {
+        margin: 0;
+        padding: 0;
         background-color: var(--background-color);
         color: var(--principal-white);
         font-family: var(--fonte-principal);
@@ -168,7 +170,7 @@ body{
         align-items: center; /* Centraliza verticalmente */
         justify-items: center; /* Centraliza horizontalmente */
         min-height: 100vh; /* Ocupa toda a altura da tela */
-        padding: 0 1em; /* Adicionar algum padding para evitar que o conteúdo fique muito próximo das bordas */
+        min-width: 100vh;
     }
 
     .container {
@@ -210,7 +212,14 @@ body{
         font-size: 24px
     }
 
+    .rodape__lista {
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+
     .texto__rodape {
+        max-width: 300px;
+        margin: 0 3em;
         font-size: 12px; /* Diminuir o tamanho do texto do rodapé */
     }
 }
